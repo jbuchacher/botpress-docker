@@ -2,7 +2,7 @@ version: '2'
 
 services:
   botpress:
-    build: ./
+    build: ./botpress
     ports:
       - 80:3000
 
@@ -11,7 +11,7 @@ services:
     ports:
       - 5000:8000
     volumes:
-      - ./:/var/lib/drone/
+      - ./drone:/var/lib/drone/
     restart: always
     environment:
       - DRONE_OPEN=true
